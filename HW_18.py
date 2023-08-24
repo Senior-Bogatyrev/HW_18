@@ -216,15 +216,15 @@ def searcher(x):
     view()
     if x == 'lastname':
         last = lastname.get()
-        showwarning_text = 'Сотрудника с такой фамилией нет!'
+        showwarn_text = 'Сотрудника с такой фамилией нет!'
         col = 1
     if x == 'one letter':
         last = one_let.get()
-        showwarning_text = f'Сотрудника с фамилией, начинающейся\n на {last} нет!'
+        showwarn_text = f'Сотрудника с фамилией, начинающейся\n на {last} нет!'
         col = 1
     if x == 'age':
         last = age.get()
-        showwarning_text = f'Сотрудника с возрастом - {last} нет!'
+        showwarn_text = f'Сотрудника с возрастом - {last} нет!'
         col = 4
     new_text = ''
     count = 0
@@ -261,7 +261,7 @@ def searcher(x):
                     f'в файле {filename}')
 
     else:
-        mb.showwarning('Не найден', showwarning_text)
+        mb.showwarning('Не найден', showwarn_text)
 
 
 def search_lastname():
@@ -283,7 +283,8 @@ def search_one_let():
         searcher('one letter')
     else:
         mb.showerror(
-            'ОШИБКА', 'Введите первую букву фамилии сотрудника в поле "1 буква"')
+            'ОШИБКА', 'Введите первую букву фамилии сотрудника в поле "1 буква"'
+            )
 
 
 def search_age():
@@ -350,14 +351,14 @@ add_btn = Button(text='Добавить', bg='lightgreen', activebackground='red
                  command=add)
 del_btn = Button(text='Удалить', bg='lightgreen', activebackground='red',
                  command=delete)
-update_btn = Button(text='Редактировать', bg='lightgreen', activebackground='red',
-                    command=choice_update)
+update_btn = Button(text='Редактировать', bg='lightgreen', activebackground=
+                    'red', command=choice_update)
 save_btn = Button(text='Сохранить', bg='lightgreen', activebackground='red',
                   command=update)
 search_btn = Button(text='Найти', bg='lightgreen', activebackground='red',
                     command=search_lastname)
-search_one_let_btn = Button(text='Найти', bg='lightgreen', activebackground='red',
-                            command=search_one_let)
+search_one_let_btn = Button(text='Найти', bg='lightgreen', activebackground=
+                            'red',command=search_one_let)
 search_age_btn = Button(text='Найти', bg='lightgreen', activebackground='red',
                         command=search_age)
 view_btn = Button(text='Показать весь список', bg='lightgreen',
